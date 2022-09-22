@@ -61,5 +61,9 @@ int is_clean(char const *str) {
   // greater than the second.
   int result = strcmp(str, cleaned);
 
+  // free is ridding cleaned of its assignment so that there
+  // are no memory leaks
+  free((char*)cleaned);
+
   return result == 0;
 }
