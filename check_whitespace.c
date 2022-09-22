@@ -63,7 +63,7 @@ int is_clean(char const *str) {
 
   // free is ridding cleaned of its assignment so that there
   // are no memory leaks
-  free((char*)cleaned);
+  free(cleaned);
 
   return result == 0;
 }
