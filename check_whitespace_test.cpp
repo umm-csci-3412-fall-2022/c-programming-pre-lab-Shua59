@@ -17,7 +17,7 @@ TEST(strip, NoWhitespace) {
 TEST(strip, WhitespaceOnFront) {
     const char* result = strip("   frog");
     ASSERT_STREQ("frog", result);
-    free((char*) result)
+    free((char*) result);
 }
 
 TEST(strip, WhitespaceOnBack) {
