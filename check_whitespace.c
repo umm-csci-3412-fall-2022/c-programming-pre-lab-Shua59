@@ -60,11 +60,10 @@ int is_clean(char const *str) {
   // 0 if they're equal, and a positive value if the first is
   // greater than the second.
   int result = strcmp(str, cleaned);
-
-  // free is ridding cleaned of its assignment so that there
-  // are no memory leaks
-  if (cleaned != "")
-  free((char*) cleaned);
+	
+  if (strcmp(cleaned, "")) {
+    free((char*)cleaned);
+  }
 
   return result == 0;
 }
